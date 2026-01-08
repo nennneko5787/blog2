@@ -1,0 +1,16 @@
+{
+  "short_name": "ねこおきば",
+  "name": "ねこおきば",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#313a42",
+  "theme_color": "#363636",
+  "icons": [
+    {
+      "src": "/images/avatar.png",
+      "sizes": "256x356",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

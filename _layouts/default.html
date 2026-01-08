@@ -2,6 +2,7 @@
 <html lang="{{ site.lang | default: 'ja-JP' }}">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{page.title | default: "???"}} | ねこおきば。</title>
     <link
@@ -28,6 +29,19 @@
       content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}"
     />
     <meta propety="og:site_name" content="ねこおきば。" />
+    <meta
+      property="og:image"
+      content="{{ thumbnail | default:
+    'https://blog.nennneko5787.net/images/0.png' }}"
+    />
+    <meta name="title" content="{{page.title | default: "???"}}" />
+    <meta
+      name="description"
+      content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Japanese" />
+    <meta name="author" content="ねんねこ" />
   </head>
   <body>
     <section class="hero is-primary">
