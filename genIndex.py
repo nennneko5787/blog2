@@ -34,3 +34,19 @@ template = template.replace(
 
 with open("index.md", "w", encoding="utf-8") as f:
     f.write(template)
+
+with open("_layouts/default.template.html", "r", encoding="utf-8") as f:
+    template = f.read()
+
+template = template.replace(
+    "{articles}",
+    "\n                  ".join(
+        [
+            f'<li><a href="/articles/{f.name.removesuffix(".md")}">{fIdToTitle[f.name]}</a>'
+            for f in files
+        ][0:5]
+    ),
+)
+
+with open("_layouts/default.html", "w", encoding="utf-8") as f:
+    f.write(template)
