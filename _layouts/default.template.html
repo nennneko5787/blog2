@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{page.title | default: "???"}} | ねこおきば。</title>
+    <title>{{ page.title | default: "???" }} | ねこおきば。</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
@@ -23,23 +23,23 @@
     />
     <script src="https://blog.nennneko5787.net/js/markdown.js"></script>
     <script>
-      const commitId = "{{commitId | default: ''}}";
+      const commitId = "{{ page.commitId | default: '' }}";
     </script>
     <script src="https://blog.nennneko5787.net/js/comment.js"></script>
 
-    <meta property="og:title" content="{{page.title | default: "???"}}">
+    <meta property="og:title" content="{{ page.title | default: "???" }}">
     <meta
       property="og:description"
       content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}"
     />
     <meta property="og:site_name" content="ねこおきば。" />
-    <meta property="og:type" content="{{ type | default: "article" }}" />
+    <meta property="og:type" content="{{ page.type | default: "article" }}" />
     <meta
       property="og:image"
-      content="{{ thumbnail | default:
+      content="{{ page.thumbnail | default:
     'https://blog.nennneko5787.net/images/0.png' }}"
     />
-    <meta name="title" content="{{page.title | default: "???"}}" />
+    <meta name="title" content="{{ page.title | default: "???" }}" />
     <meta
       name="description"
       content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}"
