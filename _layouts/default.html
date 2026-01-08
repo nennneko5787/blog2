@@ -10,7 +10,8 @@
     />
 
     <meta propety="og:title" content="{{page.title | default: "???"}}">
-    <meta propety="og:description" contents="{{ content }}">
+    <meta property="og:description"
+        content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}">
     <meta propety="og:site_name" content="ねこおきば。">
   </head>
   <body>
