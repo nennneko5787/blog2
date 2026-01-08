@@ -30,7 +30,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     image.src = comment.user.avatar_url;
     figure.append(image);
 
+    const name = document.createElement("span");
+    name.textContent = comment.user.login;
+
     authorElement.append(figure);
+    authorElement.append(name);
 
     const content = document.createElement("span");
     content.textContent = comment.body;
