@@ -16,6 +16,11 @@
       rel="stylesheet"
       href="https://blog.nennneko5787.net/css/default.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://blog.nennneko5787.net/css/markdown.css"
+    />
+    <script src="https://blog.nennneko5787.net/js/markdown.js"></script>
 
     <meta propety="og:title" content="{{page.title | default: "???"}}">
     <meta
@@ -41,7 +46,7 @@
         <div class="content">
           <div class="columns">
             <div class="column is-two-thirds">
-              <div class="box">{{ content }}</div>
+              <div class="box" id="content">{{ content }}</div>
             </div>
             <div class="column">
               <div class="box profile">

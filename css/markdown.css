@@ -1,0 +1,49 @@
+.alert-header.is-important {
+  color: #d6ade8;
+}
+
+.alert-important {
+  border-left-color: #9400d3 !important;
+}
+
+.alert-header.is-tip {
+  color: var(--bulma-success);
+}
+
+.alert-tip {
+  border-left-color: var(--bulma-success-soft) !important;
+}
+
+.alert-header.is-note {
+  color: var(--bulma-info);
+}
+
+.alert-note {
+  border-left-color: var(--bulma-info-soft) !important;
+}
+
+.alert-header.is-warning {
+  color: var(--bulma-warning);
+}
+
+.alert-warning {
+  border-left-color: var(--bulma-warning-soft) !important;
+}
+
+.alert-header.is-caution {
+  color: var(--bulma-danger);
+}
+
+.alert-caution {
+  border-left-color: var(--bulma-danger-soft) !important;
+}
+
+@media (prefers-color-scheme: white) {
+  .alert-header.is-important {
+    color: #9400d3;
+  }
+
+  .alert-important {
+    background-color: #d6ade8 !important;
+  }
+}
