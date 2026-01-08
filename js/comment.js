@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const response = await fetch(
-    `https://api.github.com/repos/nennneko5787/blog2/commits/${commitId}/comments`,
+    `https://api.github.com/repos/nennneko5787/blog2/commits/${commitId}/comments?per_page=100`,
     {
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
