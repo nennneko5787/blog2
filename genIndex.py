@@ -1,6 +1,8 @@
 from datetime import date
 from pathlib import Path
 
+import frontmatter
+
 
 def sortKey(path: Path):
     y, m, d, n = path.stem.split("-")
@@ -17,7 +19,8 @@ fIdToTitle = {}
 
 for file in files:
     with open(f"articles/{file.name}", "r", encoding="utf-8") as f:
-        fIdToTitle[file.name] = f.read().splitlines()[0].removeprefix("# ")
+        post = frontmatter.load(f)
+        fIdToTitle[file.name] = post["title"]
 
 with open("index.template.md", "r", encoding="utf-8") as f:
     template = f.read()
