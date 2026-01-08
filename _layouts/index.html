@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ja-JP' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{page.title | default: "???"}} | ねこおきば。</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+
+    <meta propety="og:title" content="{{page.title | default: '???'}}" />
+    <meta
+      property="og:description"
+      content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}"
+    />
+    <meta propety="og:site_name" content="ねこおきば。" />
+  </head>
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <p class="title">ねこおきば。</p>
+        <p class="subtitle">ねんねこのブログです。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content">{{ content }}</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          このブログの内容はあくまでも個人の意見です。試したことによる損害を管理人は負いません。ご了承ください。
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
