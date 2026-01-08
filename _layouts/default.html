@@ -29,6 +29,7 @@
       content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 120 }}"
     />
     <meta propety="og:site_name" content="ねこおきば。" />
+    <meta property="og:type" content="{{ type | default: "article" }}" />
     <meta
       property="og:image"
       content="{{ thumbnail | default:

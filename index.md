@@ -6,3 +6,5 @@
 
 - [Phigros のクラウド同期が使いたいので中国大陸版 Taptap アカウントを登録してみた](/articles/2026-01-08-02)  
 - [ねこおきば。オープン](/articles/2026-01-08-01)
+
+{% assign type = "website" %}

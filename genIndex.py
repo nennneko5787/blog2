@@ -22,13 +22,14 @@ for file in files:
 with open("index.template.md", "r", encoding="utf-8") as f:
     template = f.read()
 
-template = template.format(
-    articles="  \n".join(
+template = template.replace(
+    "{articles}",
+    "  \n".join(
         [
             f"- [{fIdToTitle[f.name]}](/articles/{f.name.removesuffix('.md')})"
             for f in files
         ]
-    )
+    ),
 )
 
 with open("index.md", "w", encoding="utf-8") as f:
