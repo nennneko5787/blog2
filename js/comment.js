@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     `https://api.github.com/repos/nennneko5787/blog2/commits/${commitId}/comments`,
     {
       headers: {
-        Accept: "application/vnd.github-commitcomment.text+json",
         "X-GitHub-Api-Version": "2022-11-28",
       },
     }
@@ -27,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     figure.className = "image is-24x24";
 
     const image = document.createElement("img");
+    image.className = "is-rounded";
     image.src = comment.user.avatar_url;
     figure.append(image);
 
