@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     name.href = comment.user.html_url;
 
     const date = document.createElement("span");
+    date.className = "commentDate";
     date.title = new Date(comment.created_at).toLocaleString();
     date.textContent = timeAgo(comment.created_at);
 
